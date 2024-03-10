@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="formSaya">
+    <ion-card>
+      <ion-card-content>
+        <ion-label>Nama</ion-label>
+        <ion-input type="text" formControlName="name" placeholder="Masukkan ame"></ion-input>
+        <br>
+        <ion-label>Alamat</ion-label>
+        <ion-input type="text" formControlName="address" placeholder="Masukkan alamat"></ion-input>
+        <br>
+        <ion-button type="submit" (click)="save()" [disabled]="!formSaya.valid" expand="block" shape="round">
+          Register
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>
